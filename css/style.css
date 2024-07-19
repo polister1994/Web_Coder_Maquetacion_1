@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "BebasNeue-reg";
+  src: url(../assets/fuentes/BebasNeue-Regular.ttf);
+}
+@font-face {
+  font-family: "Monseratt-reg";
+  src: url(../assets/fuentes/Montserrat-Regular.ttf);
+}
+body {
+  background-color: #111111;
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-family: "Monseratt-reg";
+  letter-spacing: 0.1rem;
+  position: relative;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  font-family: "Monseratt-reg";
+}
+a:hover {
+  color: rgb(124, 196, 255);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+header .section-background-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-image: url(../assets/img/background-top.jpg);
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  height: 30rem;
+}
+header .section-background-top, header .section-background-bottom {
+  box-shadow: 0px 0px 100x 46px rgba(0, 0, 0, 0.76) inset;
+  -webkit-box-shadow: 0px 0px 80px 46px hsla(0, 0%, 0%, 0.76) inset;
+  -moz-box-shadow: 0px 0px 100px 46px rgba(0, 0, 0, 0.76) inset;
+}
+header .header-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 0.5rem 1rem 0.5rem;
+  background-color: rgba(0, 0, 0, 0.199);
+  height: 5rem;
+}
+header .icon-nav {
+  width: 4rem;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+header .header-a {
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+  font-family: "BebasNeue-reg";
+}
