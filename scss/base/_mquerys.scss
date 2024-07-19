@@ -1,0 +1,33 @@
+
+@media (max-width: 500px) {
+    .header-nav{
+        justify-content:center;
+        gap: 0.2rem;
+    }
+    .section-background-top{
+        height: 20rem;
+    }
+    .input-form{
+        font-size: 1.3rem;
+        width: 20rem;
+    }
+    .form-submit{
+        width: 15rem;
+        height: 3rem;
+    }
+    .titulo2, .titulo3{
+        padding: 3rem 0;
+        max-width: 70%;
+        text-align: center;
+    }
+    .section-background-bottom{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5rem;
+        text-align: center;
+    }
+    .img-social{
+        width: 3rem;
+    }
+}

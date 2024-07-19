@@ -1,0 +1,24 @@
+.section-galeria{
+    padding: 5rem;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fill,minmax(300px, 1fr))
+    
+}
+.img-galeria{
+    height: 15rem;
+    width: 10rem;
+    max-height: 15rem;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.btn-galeria{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem;
+    font-size: 1.5rem;
+}

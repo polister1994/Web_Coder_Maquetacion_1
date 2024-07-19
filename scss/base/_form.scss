@@ -1,0 +1,34 @@
+.section-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5rem;
+    gap: 1rem;
+    font-size: 1.2rem;
+    font-family: "Monseratt-reg";
+        .section-form-div{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 0.5rem;
+        }
+        .input-form{
+            display: flex;
+            width: 30rem;
+            height: 2rem;
+            text-indent: 0.6rem;
+            border-radius: 0.4rem;
+        }
+        .input-form-mensaje{
+            height: 10rem;
+            padding-top: 1rem;
+        }
+        .form-submit{
+            display: flex;
+            width: 8rem;
+            height: 2.5rem;
+            border-radius: 0.4rem;
+            font-size: 1.2rem;
+            font-family: "BebasNeue-reg";
+        }
+}
