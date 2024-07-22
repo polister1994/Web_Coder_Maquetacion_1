@@ -1,4 +1,14 @@
 @charset "UTF-8";
+:root {
+  --color-background: #16131377;
+}
+
+.claseEjemplo {
+  box-shadow: var(--color-red) inset;
+  -webkit-box-shadow: var(--color-red) inset;
+  -moz-box-shadow: var(--color-red) inset;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -158,8 +168,12 @@ a {
 }
 a:hover {
   color: rgb(124, 196, 255);
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+  -webkit-transition: -webkit-transform ease-in 0.2s;
+  transition: -webkit-transform ease-in 0.2s;
+  transition: transform ease-in 0.2s;
+  transition: transform ease-in 0.2s, -webkit-transform ease-in 0.2s;
 }
 
 header .section-background-top {
@@ -176,10 +190,10 @@ header .section-background-top {
   background-repeat: no-repeat;
   height: 30rem;
 }
-header .section-background-top, header .section-background-bottom {
-  box-shadow: 0px 0px 100x 46px rgba(0, 0, 0, 0.76) inset;
-  -webkit-box-shadow: 0px 0px 80px 46px hsla(0, 0%, 0%, 0.76) inset;
-  -moz-box-shadow: 0px 0px 100px 46px rgba(0, 0, 0, 0.76) inset;
+header .section-background-top {
+  box-shadow: 0px -10vw 45vw 80px rgb(0 0 0) inset;
+  -webkit-box-shadow: 0px -10vw 45vw 80px rgb(0 0 0) inset;
+  -moz-box-shadow: 0px -10vw 45vw 80px rgb(0 0 0) inset;
 }
 header .header-nav {
   display: -webkit-box;
@@ -193,7 +207,7 @@ header .header-nav {
           align-items: center;
   gap: 0.5rem;
   padding: 1rem 0.5rem 1rem 0.5rem;
-  background-color: rgba(0, 0, 0, 0.199);
+  background-color: var(--color-background);
   height: 5rem;
 }
 header .icon-nav {
@@ -255,10 +269,10 @@ main .section-aviones, main .section-otros {
   gap: 2rem 4rem;
 }
 main .section-aviones .h4-article-aviones, main .section-aviones .h4-article-otros, main .section-otros .h4-article-aviones, main .section-otros .h4-article-otros {
-  background-color: rgba(10, 10, 12, 0.3411764706);
+  background-color: var(--color-background);
   text-shadow: 1px 1px black;
   border-radius: 32px;
-  padding: 0.2rem;
+  padding: 0.2rem 0.75rem;
 }
 main .section-aviones .article-aviones, main .section-aviones .article-helicopteros, main .section-aviones .article-buques, main .section-otros .article-aviones, main .section-otros .article-helicopteros, main .section-otros .article-buques {
   display: -webkit-box;
@@ -353,6 +367,9 @@ footer .section-background-bottom {
   width: 100%;
   padding: 1rem 0;
   margin-top: 3rem;
+  box-shadow: 0px -10vw 45vw 80px rgb(0 0 0) inset;
+  -webkit-box-shadow: 0px -10vw 45vw 80px rgb(0 0 0) inset;
+  -moz-box-shadow: 0px -10vw 45vw 80px rgb(0 0 0) inset;
 }
 footer .social-media {
   display: -webkit-box;

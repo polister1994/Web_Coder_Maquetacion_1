@@ -1,3 +1,18 @@
+:root{
+	--color-background : #16131377;
+}
+
+@mixin boxShadow ($color){
+	box-shadow: #{$color} inset;
+	-webkit-box-shadow: #{$color} inset;
+	-moz-box-shadow: #{$color} inset;
+
+}
+
+.claseEjemplo {
+	@include boxShadow(var(--color-red));
+}
+
 * {
 	margin: 0;
 	padding: 0;
