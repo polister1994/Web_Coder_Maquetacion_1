@@ -47,9 +47,26 @@ header{
         height: 5rem;
         
     }
+    @keyframes logo{
+        from{
+            transform: rotate(-45deg);
+        }
+        to{
+            transform: rotate(45deg);
+        }
+    }
+
     .icon-nav{
         width: 4rem;
         transform: rotate(-45deg);
+    }
+    .icon-nav:hover{
+        view-timeline-name: --logo;
+        view-timeline-axis: block;
+
+        animation-timeline: --logo;
+        animation-name: logo;
+
     }
     
     .header-a{

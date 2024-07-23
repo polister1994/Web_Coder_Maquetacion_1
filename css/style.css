@@ -210,10 +210,37 @@ header .header-nav {
   background-color: var(--color-background);
   height: 5rem;
 }
+@-webkit-keyframes logo {
+  from {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+  to {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+}
+@keyframes logo {
+  from {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+  to {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+}
 header .icon-nav {
   width: 4rem;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
+}
+header .icon-nav:hover {
+  view-timeline-name: --logo;
+  view-timeline-axis: block;
+  animation-timeline: --logo;
+  -webkit-animation-name: logo;
+          animation-name: logo;
 }
 header .header-a {
   text-decoration: none;
