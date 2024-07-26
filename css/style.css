@@ -35,12 +35,22 @@
 }
 
 .img-galeria {
+  border-radius: 5px;
   height: 15rem;
   width: 10rem;
   max-height: 15rem;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.img-galeria:hover {
+  -webkit-transform: scale(250%);
+          transform: scale(250%);
+  -webkit-transition: ease;
+  transition: ease;
+  -webkit-transition-duration: 1.5s;
+          transition-duration: 1.5s;
 }
 
 .btn-galeria {
@@ -110,45 +120,49 @@
   font-family: "BebasNeue-reg";
 }
 
-@media (max-width: 500px) {
-  .header-nav {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    gap: 0.2rem;
+@-webkit-keyframes logo {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
   }
-  .section-background-top {
-    height: 20rem;
+  25% {
+    -webkit-transform: translate3d(200px, -300px, 0);
+            transform: translate3d(200px, -300px, 0);
   }
-  .input-form {
-    font-size: 1.3rem;
-    width: 20rem;
+  50% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
   }
-  .form-submit {
-    width: 15rem;
-    height: 3rem;
+  90% {
+    -webkit-transform: translate3d(0px, 0px, 0);
+            transform: translate3d(0px, 0px, 0);
   }
-  .titulo2, .titulo3 {
-    padding: 3rem 0;
-    max-width: 70%;
-    text-align: center;
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
-  .section-background-bottom {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    gap: 5rem;
-    text-align: center;
+}
+
+@keyframes logo {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
   }
-  .img-social {
-    width: 3rem;
+  25% {
+    -webkit-transform: translate3d(200px, -300px, 0);
+            transform: translate3d(200px, -300px, 0);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  90% {
+    -webkit-transform: translate3d(0px, 0px, 0);
+            transform: translate3d(0px, 0px, 0);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
 }
 body {
@@ -210,44 +224,31 @@ header .header-nav {
   background-color: var(--color-background);
   height: 5rem;
 }
-@-webkit-keyframes logo {
-  from {
-    -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
-  }
-  to {
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
-  }
-}
-@keyframes logo {
-  from {
-    -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
-  }
-  to {
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
-  }
-}
-header .icon-nav {
-  width: 4rem;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-}
-header .icon-nav:hover {
-  view-timeline-name: --logo;
-  view-timeline-axis: block;
-  animation-timeline: --logo;
-  -webkit-animation-name: logo;
-          animation-name: logo;
-}
-header .header-a {
+header .header-nav .header-a {
   text-decoration: none;
   font-size: 18px;
   color: white;
   text-decoration: none;
   font-family: "BebasNeue-reg";
+}
+header .header-nav .icon-nav {
+  width: 4rem;
+  -webkit-animation-name: logo;
+          animation-name: logo;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-duration: 6s;
+          animation-duration: 6s;
+}
+header .header-nav .icon-nav:hover {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+header .bg-dark {
+  --bs-bg-opacity: 0.5;
+  background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
 }
 header .titulo-principal {
   margin: auto;
@@ -258,9 +259,6 @@ main {
 }
 main .titulo2 h2, main .titulo3 h2 {
   margin-bottom: 2rem;
-}
-main h4 {
-  margin-bottom: 1rem;
 }
 main .titulo2, main .titulo3 {
   display: -webkit-box;
@@ -278,9 +276,10 @@ main .titulo2, main .titulo3 {
           justify-content: center;
   padding: 5rem;
   margin: 0 auto 0 auto;
-  max-width: 40%;
+  text-align: center;
+  max-width: 50%;
 }
-main .section-aviones, main .section-otros {
+main .section-aviones, main .section-otros, main .apache {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -295,13 +294,14 @@ main .section-aviones, main .section-otros {
   margin: 2rem 0 2rem 0;
   gap: 2rem 4rem;
 }
-main .section-aviones .h4-article-aviones, main .section-aviones .h4-article-otros, main .section-otros .h4-article-aviones, main .section-otros .h4-article-otros {
+main .section-aviones .h4-article-aviones, main .section-aviones .h4-article-otros, main .section-otros .h4-article-aviones, main .section-otros .h4-article-otros, main .apache .h4-article-aviones, main .apache .h4-article-otros {
   background-color: var(--color-background);
   text-shadow: 1px 1px black;
   border-radius: 32px;
-  padding: 0.2rem 0.75rem;
+  padding: 0.25rem 0.75rem;
+  margin-bottom: 0.5rem;
 }
-main .section-aviones .article-aviones, main .section-aviones .article-helicopteros, main .section-aviones .article-buques, main .section-otros .article-aviones, main .section-otros .article-helicopteros, main .section-otros .article-buques {
+main .section-aviones .article-aviones, main .section-aviones .article-helicopteros-general, main .section-aviones .article-buques-general, main .section-otros .article-aviones, main .section-otros .article-helicopteros-general, main .section-otros .article-buques-general, main .apache .article-aviones, main .apache .article-helicopteros-general, main .apache .article-buques-general {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -317,11 +317,29 @@ main .section-aviones .article-aviones, main .section-aviones .article-helicopte
           justify-content: space-evenly;
   gap: 1rem;
 }
-main .section-aviones .article-aviones img, main .section-otros .article-aviones img {
+main .section-aviones .article-aviones .apache, main .section-aviones .article-helicopteros-general .apache, main .section-aviones .article-buques-general .apache, main .section-otros .article-aviones .apache, main .section-otros .article-helicopteros-general .apache, main .section-otros .article-buques-general .apache, main .apache .article-aviones .apache, main .apache .article-helicopteros-general .apache, main .apache .article-buques-general .apache {
+  background-image: url(../assets/img/helicopteros-1.jpg);
+}
+main .section-aviones .article-aviones .eurocopter, main .section-aviones .article-helicopteros-general .eurocopter, main .section-aviones .article-buques-general .eurocopter, main .section-otros .article-aviones .eurocopter, main .section-otros .article-helicopteros-general .eurocopter, main .section-otros .article-buques-general .eurocopter, main .apache .article-aviones .eurocopter, main .apache .article-helicopteros-general .eurocopter, main .apache .article-buques-general .eurocopter {
+  background-image: url(../assets/img/galeria12.jpg);
+}
+main .section-aviones .article-aviones .hh, main .section-aviones .article-helicopteros-general .hh, main .section-aviones .article-buques-general .hh, main .section-otros .article-aviones .hh, main .section-otros .article-helicopteros-general .hh, main .section-otros .article-buques-general .hh, main .apache .article-aviones .hh, main .apache .article-helicopteros-general .hh, main .apache .article-buques-general .hh {
+  background-image: url(../assets/img/galeria4.jpg);
+}
+main .section-aviones .article-aviones .portaviones, main .section-aviones .article-helicopteros-general .portaviones, main .section-aviones .article-buques-general .portaviones, main .section-otros .article-aviones .portaviones, main .section-otros .article-helicopteros-general .portaviones, main .section-otros .article-buques-general .portaviones, main .apache .article-aviones .portaviones, main .apache .article-helicopteros-general .portaviones, main .apache .article-buques-general .portaviones {
+  background-image: url(../assets/img/buques-1.jpg);
+}
+main .section-aviones .article-aviones .bcarga, main .section-aviones .article-helicopteros-general .bcarga, main .section-aviones .article-buques-general .bcarga, main .section-otros .article-aviones .bcarga, main .section-otros .article-helicopteros-general .bcarga, main .section-otros .article-buques-general .bcarga, main .apache .article-aviones .bcarga, main .apache .article-helicopteros-general .bcarga, main .apache .article-buques-general .bcarga {
+  background-image: url(../assets/img/galeria15.jpg);
+}
+main .section-aviones .article-aviones .cruceros, main .section-aviones .article-helicopteros-general .cruceros, main .section-aviones .article-buques-general .cruceros, main .section-otros .article-aviones .cruceros, main .section-otros .article-helicopteros-general .cruceros, main .section-otros .article-buques-general .cruceros, main .apache .article-aviones .cruceros, main .apache .article-helicopteros-general .cruceros, main .apache .article-buques-general .cruceros {
+  background-image: url(../assets/img/galeria9.jpg);
+}
+main .section-aviones .article-aviones img, main .section-otros .article-aviones img, main .apache .article-aviones img {
   max-width: 100%;
   height: auto;
 }
-main .section-aviones .div-aviones-combate, main .section-aviones .div-aviones-comerciales, main .section-aviones .div-aviones-privados, main .section-aviones .div-helicopteros, main .section-aviones .div-buques, main .section-otros .div-aviones-combate, main .section-otros .div-aviones-comerciales, main .section-otros .div-aviones-privados, main .section-otros .div-helicopteros, main .section-otros .div-buques {
+main .section-aviones .div-aviones-combate, main .section-aviones .div-aviones-comerciales, main .section-aviones .div-aviones-privados, main .section-aviones .div-helicopteros-general, main .section-aviones .div-buques-general, main .section-aviones .div-helicopteros, main .section-aviones .div-buques, main .section-otros .div-aviones-combate, main .section-otros .div-aviones-comerciales, main .section-otros .div-aviones-privados, main .section-otros .div-helicopteros-general, main .section-otros .div-buques-general, main .section-otros .div-helicopteros, main .section-otros .div-buques, main .apache .div-aviones-combate, main .apache .div-aviones-comerciales, main .apache .div-aviones-privados, main .apache .div-helicopteros-general, main .apache .div-buques-general, main .apache .div-helicopteros, main .apache .div-buques {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -337,31 +355,32 @@ main .section-aviones .div-aviones-combate, main .section-aviones .div-aviones-c
           align-items: center;
   background-size: cover;
   background-repeat: no-repeat;
+  border-radius: 5px;
   height: 24rem;
   width: 18rem;
 }
-main .section-aviones .div-aviones-comerciales, main .section-otros .div-aviones-comerciales {
+main .section-aviones .div-aviones-comerciales, main .section-otros .div-aviones-comerciales, main .apache .div-aviones-comerciales {
   background-position: 80%;
 }
-main .section-aviones .div-aviones-combate, main .section-otros .div-aviones-combate {
+main .section-aviones .div-aviones-combate, main .section-otros .div-aviones-combate, main .apache .div-aviones-combate {
   background-position: 55%;
 }
-main .section-aviones .div-helicopteros, main .section-otros .div-helicopteros {
+main .section-aviones .div-helicopteros-general, main .section-aviones .div-helicopteros, main .section-otros .div-helicopteros-general, main .section-otros .div-helicopteros, main .apache .div-helicopteros-general, main .apache .div-helicopteros {
   background-position: 55%;
 }
-main .section-aviones .div-aviones-comerciales, main .section-otros .div-aviones-comerciales {
+main .section-aviones .div-aviones-comerciales, main .section-otros .div-aviones-comerciales, main .apache .div-aviones-comerciales {
   background-image: url(../assets/img/imagen-avion-comercial.jpg);
 }
-main .section-aviones .div-aviones-privados, main .section-otros .div-aviones-privados {
+main .section-aviones .div-aviones-privados, main .section-otros .div-aviones-privados, main .apache .div-aviones-privados {
   background-image: url(../assets/img/imagen-avion-privado.jpg);
 }
-main .section-aviones .div-aviones-combate, main .section-otros .div-aviones-combate {
+main .section-aviones .div-aviones-combate, main .section-otros .div-aviones-combate, main .apache .div-aviones-combate {
   background-image: url(../assets/img/imagen-avion-combate.jpg);
 }
-main .section-aviones .div-helicopteros, main .section-otros .div-helicopteros {
+main .section-aviones .div-helicopteros-general, main .section-otros .div-helicopteros-general, main .apache .div-helicopteros-general {
   background-image: url(../assets/img/helicopteros-1.jpg);
 }
-main .section-aviones .div-buques, main .section-otros .div-buques {
+main .section-aviones .div-buques-general, main .section-otros .div-buques-general, main .apache .div-buques-general {
   background-image: url(../assets/img/buques-1.jpg);
 }
 
@@ -432,4 +451,65 @@ footer .social-media .img-social {
 footer .social-media .section-media-img :hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
+}
+
+/* este import se encuentra por aca, ya que si lo pongo arriba...
+otras propiedades del css me pisan los MQ por eso lo pongo aca al final, pero estoy al tanto que...
+deben de cargarse todos los imports al inicio del CSS */
+@media (max-width: 750px) {
+  main .titulo2, main .titulo3 {
+    max-width: 80%;
+  }
+}
+@media (max-width: 500px) {
+  header .header-nav {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 0.2rem;
+  }
+  header .section-background-top {
+    height: 20rem;
+  }
+  .section-form .input-form {
+    font-size: 1.3rem;
+    width: 20rem;
+  }
+  .section-form .form-submit {
+    width: 15rem;
+    height: 3rem;
+  }
+  main .titulo2, main .titulo3 {
+    padding: 3rem 0;
+    max-width: 70%;
+    text-align: center;
+  }
+  footer .section-background-bottom {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 5rem;
+    text-align: center;
+  }
+  footer .img-social {
+    width: 3rem;
+  }
+  footer .social-media {
+    display: none;
+  }
+}
+@media (max-width: 375px) {
+  header .header-nav .header-a {
+    font-size: 1rem;
+  }
+  header .header-nav .icon-nav {
+    width: 3.2rem;
+  }
 }

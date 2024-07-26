@@ -8,12 +8,18 @@
     
 }
 .img-galeria{
+    border-radius: 5px;
     height: 15rem;
     width: 10rem;
     max-height: 15rem;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+}
+.img-galeria:hover{
+    transform: scale(250%);
+    transition: ease;
+    transition-duration: 1.5s;
 }
 .btn-galeria{
     display: flex;
