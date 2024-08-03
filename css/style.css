@@ -14,112 +14,6 @@
   padding: 0;
 }
 
-@font-face {
-  font-family: "BebasNeue-reg";
-  src: url(../assets/fuentes/BebasNeue-Regular.ttf);
-}
-@font-face {
-  font-family: "Monseratt-reg";
-  src: url(../assets/fuentes/Montserrat-Regular.ttf);
-}
-.section-galeria {
-  padding: 5rem;
-  display: -ms-grid;
-  display: grid;
-  justify-items: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 2rem;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-}
-
-.img-galeria {
-  border-radius: 5px;
-  height: 15rem;
-  width: 10rem;
-  max-height: 15rem;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.img-galeria:hover {
-  -webkit-transform: scale(250%);
-          transform: scale(250%);
-  -webkit-transition: ease;
-  transition: ease;
-  -webkit-transition-duration: 1.5s;
-          transition-duration: 1.5s;
-}
-
-.btn-galeria {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 5rem;
-  font-size: 1.5rem;
-}
-
-.section-form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 5rem;
-  gap: 1rem;
-  font-size: 1.2rem;
-  font-family: "Monseratt-reg";
-}
-.section-form .section-form-div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  gap: 0.5rem;
-}
-.section-form .input-form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 30rem;
-  height: 2rem;
-  text-indent: 0.6rem;
-  border-radius: 0.4rem;
-}
-.section-form .input-form-mensaje {
-  height: 10rem;
-  padding-top: 1rem;
-}
-.section-form .form-submit {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 8rem;
-  height: 2.5rem;
-  border-radius: 0.4rem;
-  font-size: 1.2rem;
-  font-family: "BebasNeue-reg";
-}
-
 @-webkit-keyframes logo {
   0% {
     -webkit-transform: translate3d(0, 0, 0);
@@ -190,6 +84,14 @@ a:hover {
   transition: transform ease-in 0.2s, -webkit-transform ease-in 0.2s;
 }
 
+@font-face {
+  font-family: "BebasNeue-reg";
+  src: url(../assets/fuentes/BebasNeue-Regular.ttf);
+}
+@font-face {
+  font-family: "Monseratt-reg";
+  src: url(../assets/fuentes/Montserrat-Regular.ttf);
+}
 header .section-background-top {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -277,7 +179,7 @@ main .titulo2, main .titulo3 {
   padding: 5rem;
   margin: 0 auto 0 auto;
   text-align: center;
-  max-width: 50%;
+  max-width: 60%;
 }
 main .section-aviones, main .section-otros, main .apache {
   display: -webkit-box;
@@ -453,9 +355,127 @@ footer .social-media .section-media-img :hover {
           transform: scale(1.05);
 }
 
-/* este import se encuentra por aca, ya que si lo pongo arriba...
-otras propiedades del css me pisan los MQ por eso lo pongo aca al final, pero estoy al tanto que...
-deben de cargarse todos los imports al inicio del CSS */
+header .header-a {
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+  font-family: "BebasNeue-reg";
+}
+header .icon-nav {
+  width: 4rem;
+  -webkit-animation-name: logo;
+          animation-name: logo;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-duration: 6s;
+          animation-duration: 6s;
+}
+header .icon-nav:hover {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.section-galeria {
+  padding: 5rem;
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.img-galeria {
+  border-radius: 5px;
+  height: 15rem;
+  width: 10rem;
+  max-height: 15rem;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.img-galeria:hover {
+  -webkit-transform: scale(250%);
+          transform: scale(250%);
+  -webkit-transition: ease;
+  transition: ease;
+  -webkit-transition-duration: 1.5s;
+          transition-duration: 1.5s;
+}
+
+.btn-galeria {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 5rem;
+  font-size: 1.5rem;
+}
+
+.section-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 5rem;
+  gap: 1rem;
+  font-size: 1.2rem;
+  font-family: "Monseratt-reg";
+}
+.section-form .section-form-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 0.5rem;
+}
+.section-form .input-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 30rem;
+  height: 2rem;
+  text-indent: 0.6rem;
+  border-radius: 0.4rem;
+}
+.section-form .input-form-mensaje {
+  height: 10rem;
+  padding-top: 1rem;
+}
+.section-form .form-submit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 8rem;
+  height: 2.5rem;
+  border-radius: 0.4rem;
+  font-size: 1.2rem;
+  font-family: "BebasNeue-reg";
+}
+
 @media (max-width: 750px) {
   main .titulo2, main .titulo3 {
     max-width: 80%;
@@ -466,10 +486,18 @@ deben de cargarse todos los imports al inicio del CSS */
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    gap: 0.2rem;
+    gap: 1rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: auto;
+  }
+  header .header-nav .header-a {
+    font-size: 1.5rem;
   }
   header .section-background-top {
-    height: 20rem;
+    height: 40rem;
   }
   .section-form .input-form {
     font-size: 1.3rem;
@@ -506,9 +534,6 @@ deben de cargarse todos los imports al inicio del CSS */
   }
 }
 @media (max-width: 375px) {
-  header .header-nav .header-a {
-    font-size: 1rem;
-  }
   header .header-nav .icon-nav {
     width: 3.2rem;
   }

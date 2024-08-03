@@ -1,0 +1,39 @@
+footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+        .section-background-bottom{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            background-image: url(../assets/img/imagen-montañas-bottom.jpg);
+            background-size: cover;
+            background-position: 50% 80%;
+            background-repeat: no-repeat;
+            height: 20rem;
+            width: 100%;
+            padding: 1rem 0;
+            margin-top: 3rem;
+            @include boxShadow('0px -10vw 45vw 80px rgb(0 0 0)');
+        }
+        .social-media{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            .section-media-img{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 2rem;
+            }
+            .img-social{
+                width: 4rem;
+            }
+            .section-media-img :hover{
+                transform: scale(1.05);
+            }
+        }    
+}

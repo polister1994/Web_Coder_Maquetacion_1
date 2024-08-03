@@ -6,12 +6,18 @@
     }
 }
 @media (max-width: 500px) {
-    header .header-nav{
+    header 
+        .header-nav{
         justify-content:center;
-        gap: 0.2rem;
+        gap: 1rem;
+        flex-direction: column;
+        height: auto;
+        .header-a{
+            font-size: 1.5rem;
+        }
     }
     header .section-background-top{
-        height: 20rem;
+        height: 40rem;
     }
     .section-form
         .input-form{
@@ -48,9 +54,6 @@
 @media (max-width: 375px){
     header{
         .header-nav{
-            .header-a{
-                font-size: 1rem;
-            }
             .icon-nav{
                 width: 3.2rem;
             }
