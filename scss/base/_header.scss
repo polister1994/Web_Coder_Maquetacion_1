@@ -2,11 +2,31 @@ header{
     .section-background-top{
         display: flex;
         flex-direction: column;
-        background-image: url(../assets/img/background-top.jpg);
         background-size: cover;
-        background-position: 50%;
         background-repeat: no-repeat;
         height: 30rem;
+    }
+    .home{
+        background-image: url(../../assets/img/background-top.jpg);
+        background-position: 50%;
+    }
+    .aviones{
+        background-image: url(../../assets/img/avionesbg.jpg);
+    }
+    .buques{
+        background-image: url(../../assets/img/buquesbg.jpg);
+        background-position-y: 65%;
+    }
+    .helicopteros{
+        background-image: url(../../assets/img/helibg.jpg);
+    }
+    .galeria{
+        background-image: url(../../assets/img/gallerybg.jpg);
+        background-position-y: 70%;
+    }
+    .contacto{
+        background-image: url(../../assets/img/contactobg.jpg);
+        background-position-y: 5%;
     }
     .section-background-top {
         @include boxShadow('0px -10vw 45vw 80px rgb(0 0 0)');

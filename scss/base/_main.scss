@@ -13,7 +13,7 @@ main{
             text-align: center;
             max-width: 60%;  
         }
-        .section-aviones, .section-otros, .apache{
+        .section-aviones, .section-otros{
             display: flex;
             justify-content: space-evenly;
             flex-wrap: wrap;
@@ -31,26 +31,22 @@ main{
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                justify-content: space-evenly;
+                margin: 1rem;
                 gap:1rem;
-                .apache{
-                    background-image: url(../assets/img/helicopteros-1.jpg)
+                height: 30rem;
+                width: 25rem;
+
+                .apache, .hh, .eurocopter{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
                 }
-                .eurocopter{
-                    background-image: url(../assets/img/galeria12.jpg);
+                .portaviones, .bcarga, .cruceros{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
                 }
-                .hh{
-                    background-image: url(../assets/img/galeria4.jpg);
-                }
-                .portaviones{
-                    background-image: url(../assets/img/buques-1.jpg);
-                }
-                .bcarga{
-                    background-image: url(../assets/img/galeria15.jpg);
-                }
-                .cruceros{
-                    background-image: url(../assets/img/galeria9.jpg);
-                }
+                
             }
             
             .article-aviones img{
@@ -74,9 +70,7 @@ main{
             .div-aviones-combate{
             background-position: 55%;
             }
-            .div-helicopteros-general, .div-helicopteros{
-                background-position: 55%;
-                }
+
             
             .div-aviones-comerciales{
                 background-image: url(../assets/img/imagen-avion-comercial.jpg);

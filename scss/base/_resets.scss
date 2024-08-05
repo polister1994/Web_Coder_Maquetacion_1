@@ -7,6 +7,12 @@
 	-webkit-box-shadow: #{$color} inset;
 	-moz-box-shadow: #{$color} inset;
 
+
+}@mixin background ($color){
+	box-shadow: #{$color} inset;
+	-webkit-box-shadow: #{$color} inset;
+	-moz-box-shadow: #{$color} inset;
+
 }
 
 .claseEjemplo {
