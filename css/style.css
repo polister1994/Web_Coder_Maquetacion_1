@@ -105,25 +105,25 @@ header .section-background-top {
   height: 30rem;
 }
 header .home {
-  background-image: url(../../assets/img/background-top.jpg);
+  background-image: url(../assets/img/background-top.jpg);
   background-position: 50%;
 }
 header .aviones {
-  background-image: url(../../assets/img/avionesbg.jpg);
+  background-image: url(../assets/img/avionesbg.jpg);
 }
 header .buques {
-  background-image: url(../../assets/img/buquesbg.jpg);
+  background-image: url(../assets/img/buquesbg.jpg);
   background-position-y: 65%;
 }
 header .helicopteros {
-  background-image: url(../../assets/img/helibg.jpg);
+  background-image: url(../assets/img/helibg.jpg);
 }
 header .galeria {
-  background-image: url(../../assets/img/gallerybg.jpg);
+  background-image: url(../assets/img/gallerybg.jpg);
   background-position-y: 70%;
 }
 header .contacto {
-  background-image: url(../../assets/img/contactobg.jpg);
+  background-image: url(../assets/img/contactobg.jpg);
   background-position-y: 5%;
 }
 header .section-background-top {
