@@ -1,0 +1,19 @@
+header{
+    .header-a{
+        text-decoration: none;
+        font-size: 18px;
+        color: white;
+        text-decoration: none;
+        font-family: "BebasNeue-reg";
+    }
+    .icon-nav{
+        width: 4rem;
+        animation-name: logo;
+        animation-delay: 1s;
+        animation-duration: 6s;
+    }
+    .icon-nav:hover{
+        transform: rotate(360deg);
+        transition: 1s;                
+    }
+}
